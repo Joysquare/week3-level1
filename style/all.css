@@ -1,5 +1,59 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 *, *:before, *:after {
   text-decoration: none;
   -webkit-box-sizing: border-box;
@@ -55,7 +109,6 @@ a {
 @media (max-width: 767px) {
   .container {
     padding: 0 15px;
-    max-width: 100%;
     padding: 0 24px;
   }
 }
@@ -72,10 +125,20 @@ nav {
           align-items: center;
 }
 
+nav h1 a {
+  background-image: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
+  display: block;
+  width: 80px;
+  height: 49px;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: hidden;
+}
+
 nav .head-nav a {
   margin-left: 64px;
   display: block;
-  padding: 16px 0;
+  padding: 10px 0;
   position: relative;
 }
 
@@ -114,8 +177,10 @@ nav .head-nav a:after {
   nav h1 {
     margin: 10px 0;
   }
-  nav h1 .logo {
+  nav h1 a {
     width: 48px;
+    height: 29px;
+    background-size: cover;
   }
   nav .head-nav {
     -ms-flex-wrap: wrap;
@@ -134,7 +199,6 @@ nav .head-nav a:after {
   }
   nav .head-nav a {
     margin: 0;
-    display: block;
     text-align: center;
   }
 }
@@ -205,6 +269,9 @@ footer .footer-menu .social-media li {
 footer .footer-contact {
   font-size: 36px;
   line-height: 48px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 992px) {
@@ -228,6 +295,13 @@ footer .footer-contact li {
 @media (max-width: 767px) {
   footer .footer-contact li {
     margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+  footer .footer-contact li:nth-child(2) {
+    margin-right: 4px;
+    margin-bottom: 16px;
   }
 }
 
@@ -265,8 +339,6 @@ footer .footer-contact .mail-icon {
 @media (max-width: 767px) {
   footer .footer-contact .mail-icon {
     width: 20px;
-    margin-right: 4px;
-    margin-bottom: 16px;
   }
 }
 
@@ -366,4 +438,4 @@ footer .policy .policy-link li {
     margin-bottom: 8px;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=all.css.map */

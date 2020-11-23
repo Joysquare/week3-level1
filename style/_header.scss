@@ -1,0 +1,71 @@
+nav{
+    padding: 30px 88px;
+    font-size: 20px;
+    align-items: center;
+    h1 a{
+        background-image: url('https://hexschool.github.io/webLayoutTraining1st/week3/logo.png');
+        display: block;
+        width: 80px;
+        height: 49px;
+        text-indent: 101%;
+        overflow: hidden;
+        white-space: hidden;
+    } 
+    .head-nav{
+        a{
+            margin-left: $m-base*8;
+            display: block;
+            padding: $p-base*1.25 0;
+            position: relative;
+            &:hover:after{
+                left: 0;
+                right: 0;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                height: 2px;
+                background-color: $secondary;
+                bottom: 0px;
+                transition: .3s;
+            }
+        }
+    }
+    @include pad{
+        padding: 30px 39px;
+    }
+    @include mobile{
+        padding: 0 0;
+        flex-direction: column;
+        max-width: 100%;
+        h1{
+            margin: 10px 0;
+            a{
+                width: 48px;
+                height: 29px;
+                background-size: cover;
+            }
+        }
+        .head-nav{
+            flex-wrap: wrap;
+            width: 100%;
+            li{
+                width: 50%;
+                border: 1px solid $white;
+                &:nth-child(odd){
+                    border-left: none;
+                }
+                &:nth-child(even){
+                    border-right: none;
+                }
+            }
+
+            a{
+                margin: 0;
+                text-align: center;
+            }
+        }
+    }
+}
